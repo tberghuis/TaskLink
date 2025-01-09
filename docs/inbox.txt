@@ -8,7 +8,5 @@ make github public
 just asks which app to use.....
 tasker://assistantactions?task=studio
 
-
 tasklink://tasklink/?task_name=studio
-
-finish activity
+tasklink://tasklink/?task_name=asus
