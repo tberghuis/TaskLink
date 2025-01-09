@@ -10,3 +10,5 @@ tasker://assistantactions?task=studio
 
 tasklink://tasklink/?task_name=studio
 tasklink://tasklink/?task_name=asus
+
+build release APK
