@@ -6,12 +6,12 @@ plugins {
 
 android {
   namespace = "dev.tberghuis.tasklink"
-  compileSdk = 34
+  compileSdk = 35
 
   defaultConfig {
     applicationId = "dev.tberghuis.tasklink"
     minSdk = 34
-    targetSdk = 34
+    targetSdk = 35
     versionCode = 1
     versionName = "1.0"
 
