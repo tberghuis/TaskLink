@@ -1,5 +1,7 @@
 package dev.tberghuis.tasklink
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,32 +18,29 @@ import dev.tberghuis.tasklink.ui.theme.TaskLinkTheme
 class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    enableEdgeToEdge()
-    setContent {
-      TaskLinkTheme {
-        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-          Greeting(
-            name = "Android",
-            modifier = Modifier.padding(innerPadding)
-          )
-        }
-      }
-    }
+//    enableEdgeToEdge()
+//    setContent {
+//      TaskLinkTheme {
+//        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//          Text("hello")
+//        }
+//      }
+//    }
   }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-  Text(
-    text = "Hello $name!",
-    modifier = modifier
-  )
+
+fun processIntentData(mainActivity: MainActivity) {
+  val context: Context = mainActivity
+  // ...
+
+
+  val intent = Intent("net.dinglisch.android.tasker.ACTION_TASK").apply {
+    putExtra("task_name", "studio")
+//    setPackage("com.example.snippets")
+  }
+  context.sendBroadcast(intent)
+
+
 }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-  TaskLinkTheme {
-    Greeting("Android")
-  }
-}
