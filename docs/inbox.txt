@@ -1,9 +1,5 @@
 ...
 github readme
-  tasker setting
-    allow external access
-make github public
-
 
 just asks which app to use.....
 tasker://assistantactions?task=studio

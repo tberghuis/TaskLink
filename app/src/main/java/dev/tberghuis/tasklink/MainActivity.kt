@@ -16,15 +16,22 @@ class MainActivity : ComponentActivity() {
 
 fun processIntentData(mainActivity: MainActivity) {
   val context: Context = mainActivity
-  val data: Uri = mainActivity.intent?.data ?: return
+  val dataUri: Uri = mainActivity.intent?.data ?: return
   // uri tasklink://tasklink/?task_name=xxx
-  val task = data.getQueryParameter("task_name")
+  val task = dataUri.getQueryParameter("task_name")
   if (task.isNullOrEmpty()) {
     return
   }
   logd("task $task")
-  val intent = Intent("net.dinglisch.android.tasker.ACTION_TASK").apply {
-    putExtra("task_name", task)
+
+//  val intent = Intent("net.dinglisch.android.tasker.ACTION_TASK").apply {
+//    putExtra("task_name", task)
+//  }
+//  context.sendBroadcast(intent)
+
+  val intent = Intent(Intent.ACTION_VIEW).apply {
+    data = Uri.parse("tasker://assistantactions?task=$task")
   }
-  context.sendBroadcast(intent)
+
+  context.startActivity(intent)
 }
