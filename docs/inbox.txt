@@ -1,0 +1,6 @@
+...
+github readme
+  tasker setting
+    allow external access
+make github public
+
