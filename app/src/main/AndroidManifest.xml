@@ -14,7 +14,10 @@
         <activity
                 android:name=".MainActivity"
                 android:exported="true"
-                android:theme="@style/Theme.TaskLink">
+                android:theme="@android:style/Theme.NoDisplay"
+                android:launchMode="singleInstance"
+                android:excludeFromRecents="true"
+                android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <!--todo remove-->

@@ -4,3 +4,11 @@ github readme
     allow external access
 make github public
 
+
+just asks which app to use.....
+tasker://assistantactions?task=studio
+
+
+tasklink://tasklink/?task_name=studio
+
+finish activity
